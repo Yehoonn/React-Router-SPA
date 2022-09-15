@@ -1,19 +1,14 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import ArticleItems from "./ArticleItems";
 
 const Articles = () => {
   return (
     <div>
       <Outlet />
       <ul>
-        <li>
-          <Link to="/Articles/1">게시글 1</Link>
-        </li>
-        <li>
-          <Link to="/Articles/2">게시글 2</Link>
-        </li>
-        <li>
-          <Link to="/Articles/3">게시글 3</Link>
-        </li>
+        <ArticleItems id={1} />
+        <ArticleItems id={2} />
+        <ArticleItems id={3} />
       </ul>
     </div>
   );
